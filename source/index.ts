@@ -9,6 +9,7 @@ import { AskPassword } from "./ask-password";
 import { AutoComplete } from "./auto-complete";
 import { Box } from "./box";
 import { Clear } from "./clear";
+import { ILogger } from "./components/contracts";
 import { Error } from "./error";
 import { Fatal } from "./fatal";
 import { Info } from "./info";
@@ -131,7 +132,7 @@ export class Command extends Clipanion {
     return new Warning(this.logger());
   }
 
-  protected logger(): Console {
+  protected logger(): ILogger {
     return console;
   }
 }

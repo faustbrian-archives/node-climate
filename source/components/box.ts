@@ -1,6 +1,8 @@
 import boxen from "boxen";
 
-export class Box {
+import { Component } from "./component";
+
+export class Box extends Component {
   public render(message: string): void {
     this.logger.log(
       boxen(message, {

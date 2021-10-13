@@ -1,6 +1,7 @@
+import { Component } from "./component";
 import { Prompt } from "./prompt";
 
-export class MultiSelect {
+export class MultiSelect extends Component {
   public async render(
     message: string,
     choices: any[],

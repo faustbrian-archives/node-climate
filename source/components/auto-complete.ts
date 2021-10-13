@@ -1,6 +1,7 @@
+import { Component } from "./component";
 import { Prompt } from "./prompt";
 
-export class AutoComplete {
+export class AutoComplete extends Component {
   public async render(
     message: string,
     choices: any[],
