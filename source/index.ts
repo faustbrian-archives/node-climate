@@ -10,14 +10,15 @@ import { AskPassword } from "./components/ask-password";
 import { AutoComplete } from "./components/auto-complete";
 import { Box } from "./components/box";
 import { Clear } from "./components/clear";
-import { ILogger } from "./components/contracts";
 import { Error } from "./components/error";
 import { Fatal } from "./components/fatal";
+import { ILogger } from "./components/contracts";
 import { Info } from "./components/info";
 import { Listing } from "./components/listing";
 import { Log } from "./components/log";
 import { MultiSelect } from "./components/multi-select";
 import { NewLine } from "./components/new-line";
+import { Prompt } from "./components/prompt";
 import { Select } from "./components/select";
 import { Spinner } from "./components/spinner";
 import { Success } from "./components/success";
@@ -134,6 +135,7 @@ export class Command extends Clipanion {
 
   protected logger(): ILogger {
     return {
+      log: console.log,
       error: console.error,
       info: console.info,
       warning: console.warn,
