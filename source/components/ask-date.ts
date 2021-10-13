@@ -1,9 +1,9 @@
 import { Component } from "./component";
-import { Prompt } from "./prompt";
+import { prompt } from "./prompt";
 
 export class AskDate extends Component {
   public async render(message: string, options: object = {}): Promise<string> {
-    const { value } = await this.app.get<Prompt>(Identifiers.Prompt).render({
+    const { value } = await prompt(this.logger, this.module, {
       message,
       name: "value",
       type: "date",

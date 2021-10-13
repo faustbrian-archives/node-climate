@@ -17,7 +17,6 @@ import { Listing } from "./listing";
 import { Log } from "./log";
 import { MultiSelect } from "./multi-select";
 import { NewLine } from "./new-line";
-import { Prompt } from "./prompt";
 import { Select } from "./select";
 import { Spinner } from "./spinner";
 import { Success } from "./success";
@@ -133,6 +132,10 @@ export class Command extends Clipanion {
   }
 
   protected logger(): ILogger {
-    return console;
+    return {
+      error: console.error,
+      info: console.info,
+      warning: console.warn,
+    };
   }
 }

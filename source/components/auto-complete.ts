@@ -1,5 +1,5 @@
 import { Component } from "./component";
-import { Prompt } from "./prompt";
+import { prompt } from "./prompt";
 
 export class AutoComplete extends Component {
   public async render(
@@ -7,7 +7,7 @@ export class AutoComplete extends Component {
     choices: any[],
     options: object = {},
   ): Promise<string> {
-    const { value } = await this.app.get<Prompt>(Identifiers.Prompt).render({
+    const { value } = await prompt(this.logger, this.module, {
       choices,
       message,
       name: "value",
