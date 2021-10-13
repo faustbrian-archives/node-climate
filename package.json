@@ -1,14 +1,14 @@
 {
-  "name": "@faustbrian/node-hapi-json-rpc",
+  "name": "@faustbrian/node-climate",
   "version": "1.0.0",
   "description": "An implementation of the JSON-RPC 2.0 specification for building RPCs with @hapijs",
-  "homepage": "https://github.com/faustbrian/node-hapi-json-rpc",
+  "homepage": "https://github.com/faustbrian/node-climate",
   "bugs": {
-    "url": "https://github.com/faustbrian/node-hapi-json-rpc/issues"
+    "url": "https://github.com/faustbrian/node-climate/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/faustbrian/node-hapi-json-rpc.git"
+    "url": "git+https://github.com/faustbrian/node-climate.git"
   },
   "license": "AGPL-3.0-or-later",
   "author": {

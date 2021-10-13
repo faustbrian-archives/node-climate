@@ -2,20 +2,20 @@
 
 ---
 
-# @faustbrian/node-hapi-json-rpc
+# @faustbrian/node-climate
 
-[![npm version](https://badgen.net/npm/v/@faustbrian/node-hapi-json-rpc)](https://npm.im/@faustbrian/node-hapi-json-rpc)
+[![npm version](https://badgen.net/npm/v/@faustbrian/node-climate)](https://npm.im/@faustbrian/node-climate)
 
 ## Installation
 
 ```
-pnpm install @faustbrian/node-hapi-json-rpc
+pnpm install @faustbrian/node-climate
 ```
 
 ## Usage
 
 ```ts
-import { plugin } from "@faustbrian/node-hapi-json-rpc";
+import { plugin } from "@faustbrian/node-climate";
 import Joi from "joi";
 
 await server.register({
