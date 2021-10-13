@@ -1,38 +1,14 @@
-import { Application } from "../contracts";
-import { Identifiers, inject, injectable } from "../ioc";
 import { Prompt } from "./prompt";
 
-/**
- * @export
- * @class Toggle
- */
-@injectable()
 export class Toggle {
-    /**
-     * @private
-     * @type {Application}
-     * @memberof Command
-     */
-    @inject(Identifiers.Application)
-    private readonly app!: Application;
+  public async render(message: string, options: object = {}): Promise<boolean> {
+    const { value } = await this.app.get<Prompt>(Identifiers.Prompt).render({
+      message,
+      name: "value",
+      type: "toggle",
+      ...options,
+    });
 
-    /**
-     * @static
-     * @param {string} message
-     * @param {object} [opts={}]
-     * @returns {Promise<boolean>}
-     * @memberof Toggle
-     */
-    public async render(message: string, opts: object = {}): Promise<boolean> {
-        const { value } = await this.app.get<Prompt>(Identifiers.Prompt).render({
-            ...{
-                type: "toggle",
-                name: "value",
-                message,
-            },
-            ...opts,
-        });
-
-        return value as boolean;
-    }
+    return value as boolean;
+  }
 }
